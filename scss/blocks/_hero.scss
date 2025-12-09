@@ -1,0 +1,81 @@
+.hero {
+    padding: 40px 0;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        &-item {}
+    }
+
+
+
+    &__slide {
+        display: flex;
+        flex-direction: column;
+
+        &-selecter {
+            padding: 40px 0 20px;
+            display: flex;
+            gap: 30px;
+            border-bottom: 1px solid $color-chrome-white;
+
+            &-list,&-grid {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 18px;
+                line-height: 26px;
+                color: $color-mischka;
+                cursor: pointer;
+
+                &--active {
+                    color: $color-black;
+                }
+            }
+        }
+
+        &-list {
+            display: none;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            &-item {
+                border-bottom: 1px solid $color-chrome-white;
+
+                &:last-child {
+                    border: none;
+                }
+            }
+        }
+
+        &-grid {
+            display: none;
+        }
+    }
+
+    .hero__slide-selecter:has(.hero__slide-selecter-list.hero__slide-selecter-list--active)~.hero__slide-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero__slide-selecter:has(.hero__slide-selecter-grid.hero__slide-selecter-grid--active)~.hero__slide-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        list-style: none;
+        padding: 0;
+    }
+
+
+
+
+
+
+
+}

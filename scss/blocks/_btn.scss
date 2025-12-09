@@ -1,0 +1,31 @@
+.btn{
+
+    :disabled{
+        visibility: hidden;
+    }
+
+    
+
+    &__giper{
+        background-color: $color-ecru-white;
+        border: none;
+        border-radius: 60px;
+        padding: 8px 16px;
+        font-size: 14px;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    &--active{
+
+        .btn__giper{
+            background-color: $color-blue-charcoa;
+            color: $color-white;
+        }
+    }
+
+    
+
+
+
+}
