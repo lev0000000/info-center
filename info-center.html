@@ -12,7 +12,7 @@
 <body>
   <header class="header">
     <div class="container">
-      <div class="header__burger header__burger--active">
+      <div class="header__burger">
         <div class="header__burger-wrapper">
           <div class="header__burger-blocks">
             <div class="header__burger-left">
@@ -33,7 +33,52 @@
               <span class="header__burger-little-item">Контакты</span>
             </div>
           </div>
-          <div class="header__burger-social"></div>
+          <div class="header__burger-social">
+            <ul class="header__burger-social-list">
+              <li class="header__burger-social-list-item">
+                <a href="#" class="header__burger-social-link">
+                  <svg class="header__burger-social-icon" width="20" height="20">
+                    <use xlink:href="images/sprite.svg#icon-whatsapp"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="header__burger-social-list-item">
+                <a href="#" class="header__burger-social-link">
+                  <svg class="header__burger-social-icon" width="22" height="18">
+                    <use xlink:href="images/sprite.svg#icon-tg"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="header__burger-social-list-item">
+                <a href="#" class="header__burger-social-link">
+                  <svg class="header__burger-social-icon" width="24" height="14">
+                    <use xlink:href="images/sprite.svg#icon-vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="header__burger-social-list-item">
+                <a href="#" class="header__burger-social-link">
+                  <svg class="header__burger-social-icon" width="22" height="14">
+                    <use xlink:href="images/sprite.svg#icon-youtube"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="header__burger-social-list-item">
+                <a href="#" class="header__burger-social-link">
+                  <svg class="header__burger-social-icon" width="20" height="20">
+                    <use xlink:href="images/sprite.svg#icon-dzen"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="header__burger-social-list-item">
+                <a href="#" class="header__burger-social-link">
+                  <svg class="header__burger-social-icon" width="20" height="20">
+                    <use xlink:href="images/sprite.svg#icon-hh"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="header__content">
@@ -41,6 +86,11 @@
           <button class="header__menu" type="button" aria-label="Переключатель меню">
             <svg class="header__menu-icon" width="60" height="23" aria-hidden="true">
               <use xlink:href="images/sprite.svg#icon-menu"></use>
+            </svg>
+          </button>
+          <button class="header__menu-close" type="button" aria-label="Переключатель меню">
+            <svg class="header__menu-icon-close" width="40" height="40" aria-hidden="true">
+              <use xlink:href="images/sprite.svg#icon-close"></use>
             </svg>
           </button>
           <a class="header__logo-link" href="#" aria-label="Переход на главную страницу">
@@ -151,13 +201,18 @@
           </ul>
           <div class="hero__slide">
             <div class="hero__slide-selecter">
-              <div class="hero__slide-selecter-list hero__slide-selecter-list--active">
-                <svg width="24" height="24">
+              <div class="hero__slide-selecter-project">
+                <div class="btn">
+                  <button class="btn__giper">Все проекты</button>
+                </div>
+              </div>
+              <div class="hero__slide-selecter-list">
+                <svg class="hero__slide-selecter-icon" width="24" height="24">
                   <use xlink:href="images/sprite.svg#icon-list"></use>
                 </svg>
                 <span class="hero__slide-selecter-text">Списком</span>
               </div>
-              <div class="hero__slide-selecter-grid">
+              <div class="hero__slide-selecter-grid hero__slide-selecter-grid--active">
                 <svg width="24" height="24">
                   <use xlink:href="images/sprite.svg#icon-grid"></use>
                 </svg>
@@ -179,7 +234,7 @@
                         &laquo;Чистые Пруды&raquo;
                       </h2>
                       <span class="card__block-data">12&nbsp;апреля 2024</span>
-                      <div class="btn">
+                      <div class="btn card__block-grid-btn">
                         <button class="btn__giper">Чистые пруды</button>
                       </div>
                     </div>
@@ -209,7 +264,7 @@
                       <h2 class="card__block-heading">&laquo;Дзен&raquo;. Главные места и&nbsp;секреты Чистых прудов
                       </h2>
                       <span class="card__block-data">8&nbsp;апреля 2024</span>
-                      <div class="btn">
+                      <div class="btn card__block-grid-btn">
                         <button class="btn__giper">Чистые пруды</button>
                       </div>
                     </div>
@@ -273,7 +328,7 @@
                       <h2 class="card__block-heading">Sminex создаёт самый близкий к&nbsp;Кремлю всесезонный двор-сад
                       </h2>
                       <span class="card__block-data">4&nbsp;апреля 2024</span>
-                      <div class="btn">
+                      <div class="btn card__block-grid-btn">
                         <button class="btn__giper">Ильинка 3/8</button>
                       </div>
                     </div>
@@ -304,7 +359,7 @@
                       <h2 class="card__block-heading">Видео. Ювелирное воссоздание барельефов &laquo;Ильинки 3/8&raquo;
                       </h2>
                       <span class="card__block-data">3&nbsp;апреля 2024</span>
-                      <div class="btn">
+                      <div class="btn card__block-grid-btn">
                         <button class="btn__giper">Ильинка 3/8</button>
                       </div>
                     </div>
@@ -394,9 +449,8 @@
                       <button class="btn__giper" disabled></button>
                     </div>
                     <div class="card-grids__block">
-                      <div class="card-grids__block-data">12 апреля 2024</div>
-                      <div class="card-grids__block-heading">Sminex приступил к фасадным работам в клубном доме «Чистые
-                        Пруды»</div>
+                      <div class="card-grids__block-data">4 апреля 2024</div>
+                      <div class="card-grids__block-heading">Высокий спрос привёл к росту цен на элитную недвижимость Остоженки</div>
                     </div>
                   </div>
                 </div>
@@ -431,9 +485,6 @@
               <li class="hero__slide-grid-item">
                 <div class="card-grids card-grids--stage-6">
                   <div class="card-grids__wrapper">
-                    <div class="btn">
-                      <button class="btn__giper" disabled></button>
-                    </div>
                     <div class="card-grids__block">
                       <div class="card-grids__block-data">3 апреля 2024</div>
                       <div class="card-grids__block-heading">РБК. Пять зданий с эффектной архитектурой, которые скоро

@@ -2,7 +2,10 @@
     padding: 40px;
     background-size: cover;
     position: relative;
-    min-height: 360px;
+    display: flex;
+    align-items: end;
+    height: 100%;
+    width: auto;
 
     &::before {
         content: "";
@@ -14,6 +17,12 @@
         height: 100%;
         background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
 
+    }
+
+    @include vp-767 {
+        padding: 20px;
+        width: 100%;
+        height: 200px;
     }
 
 
@@ -32,7 +41,7 @@
     &--stage-4 {
         background-image: url("../../images/news/img-4-grid.jpg");
     }
-    
+
     &--stage-5 {
         background-image: url("../../images/news/img-5-grid.jpg");
     }
@@ -45,13 +54,19 @@
         display: flex;
         flex-direction: column;
         gap: 158px;
+
+        @include vp-767{
+            gap: 62px;
+        }
+
     }
 
     &__block {
         display: flex;
         flex-direction: column;
         z-index: 2;
-        
+        gap: 10px;
+
         &-heading {
             font-family: $ff-imb-plex;
             font-weight: 200;
@@ -61,13 +76,29 @@
             text-transform: uppercase;
             margin: 0;
             color: $color-white;
+
+            @include vp-1023 {
+                font-size: 16px;
+                line-height: 20px;
+            }
         }
 
         &-data {
             font-size: 14px;
             line-height: 20px;
             color: $color-white;
+
+            @include vp-1023 {
+                font-size: 12px;
+                line-height: 16px;
+            }
         }
+
+
+    }
+
+    &--stage-1 &__wrapper{
+        gap: 42px;
     }
 
 

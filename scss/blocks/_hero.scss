@@ -1,6 +1,10 @@
 .hero {
     padding: 40px 0;
 
+    @include vp-1023 {
+        padding: 15px 0;
+    }
+
     &__list {
         display: flex;
         flex-wrap: wrap;
@@ -10,6 +14,10 @@
         padding: 0;
 
         &-item {}
+
+        @include vp-767 {
+            display: none;
+        }
     }
 
 
@@ -23,8 +31,27 @@
             display: flex;
             gap: 30px;
             border-bottom: 1px solid $color-chrome-white;
+            margin-bottom: 40px;
 
-            &-list,&-grid {
+            @include vp-767 {
+                padding: 0 0 15px;
+                display: grid;
+                grid-template-columns: 260px 20px  20px;
+                gap:15px;
+                margin-bottom: 30px;
+
+            }
+
+            &-project {
+                display: none;
+
+                @include vp-767 {
+                    display: flex;
+                }
+            }
+
+            &-list,
+            &-grid {
                 display: flex;
                 align-items: center;
                 gap: 10px;
@@ -32,9 +59,28 @@
                 line-height: 26px;
                 color: $color-mischka;
                 cursor: pointer;
+                margin: 0;
+
+                @include vp-767{
+                    justify-content: end;
+                }
 
                 &--active {
                     color: $color-black;
+                }
+            }
+
+            &-text {
+                @include vp-767 {
+                    display: none;
+
+                }
+            }
+
+            &-icon{
+                @include vp-767{
+                    width: 20px;
+                    height: 20px;
                 }
             }
         }
@@ -67,9 +113,20 @@
     .hero__slide-selecter:has(.hero__slide-selecter-grid.hero__slide-selecter-grid--active)~.hero__slide-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3,360px);
         gap: 20px;
         list-style: none;
+        margin: 0;
         padding: 0;
+
+        @media (max-width:1400px) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @include vp-767{
+            gap: 15px;
+        }
     }
 
 
