@@ -1,12 +1,21 @@
-.btn{
+.btn {
 
-    :disabled{
+    :disabled {
         visibility: hidden;
     }
 
-    
+    &:focus-visible {
+        outline: none;
+    }
 
-    &__giper{
+    &:hover>&__giper,
+    &:focus-visible>&__giper {
+        background-color: $color-chrome-white;
+    }
+
+
+
+    &__giper {
         background-color: $color-ecru-white;
         border: none;
         border-radius: 60px;
@@ -15,21 +24,24 @@
         line-height: 20px;
         cursor: pointer;
 
-        @include vp-767{
+
+
+
+        @include vp-767 {
             font-size: 12px;
             line-height: 16px;
         }
     }
 
-    &--active{
+    &--active {
 
-        .btn__giper{
+        .btn__giper {
             background-color: $color-blue-charcoa;
             color: $color-white;
         }
     }
 
-    
+
 
 
 

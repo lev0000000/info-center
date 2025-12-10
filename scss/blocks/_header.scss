@@ -9,8 +9,14 @@
   background-color: $color-white;
   z-index: 10;
 
+  
+
   @include vp-1023 {
-    padding: 17px 0 16px;
+    padding: 14px 0;
+  }
+
+  @include vp-767{
+    padding: 18px 0;
   }
 
   .container {
@@ -19,6 +25,11 @@
 
     @include vp-1023 {
       padding: 0 20px;
+    }
+
+    @include vp-767{
+
+      max-width: 375px;
     }
   }
 
@@ -68,6 +79,12 @@
       display: none;
       width: 40px;
       height: 40px;
+
+      @include vp-1023 {
+        padding: 0;
+        width: 32px;
+        height: 32px;
+      }
     }
   }
 
@@ -83,6 +100,11 @@
     &-close {
       width: 40px;
       height: 40px;
+
+      @include vp-1023 {
+        width: 32px;
+        height: 32px;
+      }
     }
   }
 
@@ -195,11 +217,41 @@
     width: 100%;
     padding: 180px 249px 250px;
 
+    @include vp-1023 {
+      top: 61px;
+      padding: 80px 74px 141px;
+    }
+
+    @include vp-767 {
+      top: 61px;
+      padding: 40px 20px;
+    }
+
     &-wrapper {}
 
     &-blocks {
       display: flex;
       gap: 90px;
+
+      @include vp-1023 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 60px;
+        row-gap: 80px;
+      }
+
+      @include vp-767 {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+    }
+
+    &-link {
+
+      @include vp-767 {
+        max-width: 280px;
+      }
     }
 
     &-left,
@@ -209,6 +261,30 @@
       flex-direction: column;
       width: 350px;
       gap: 40px;
+
+      @include vp-1023 {
+        width: 280px;
+        gap: 35px;
+      }
+
+      @include vp-767 {
+        max-width: 280px;
+        gap: 20px;
+      }
+
+    }
+
+    &-mid {
+      @include vp-1023 {
+        grid-row: 2;
+        grid-column: 1;
+      }
+    }
+
+    &-right {
+      @include vp-1023 {
+        grid-column: 2;
+      }
     }
 
     &-item {
@@ -216,13 +292,49 @@
       line-height: 28px;
       letter-spacing: 0.02em;
       color: $color-white-50;
+
+      &:focus-visible{
+        outline: none;
+      }
+
+      @include vp-1023 {
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      @include vp-767 {
+        font-size: 16px;
+        line-height: 20px;
+      }
     }
 
     &-little-item {
       font-size: 18px;
       line-height: 26px;
       color: $color-white-50;
+
+      @include vp-1023 {
+        font-size: 14px;
+        line-height: 20px;
+      }
     }
+
+    &-link {
+      &:focus-visible{
+        outline: none;
+      }
+
+      &:hover>.header__burger-item,
+      &:focus-visible>.header__burger-item {
+        color: $color-white;
+      }
+
+      &:hover>.header__burger-little-item,
+      &:focus-visible>.header__burger-little-item {
+        color: $color-ecru-white;
+      }
+    }
+
 
     &-social {
 
@@ -234,20 +346,66 @@
         flex-direction: column;
         gap: 60px;
         position: absolute;
-        right: 52px;
+        right: 30px;
         top: 116px;
 
-        &-item{
+        @include vp-1023 {
+          top: 101px;
+          gap: 50px;
+          right: 5px;
+
+        }
+
+        @include vp-767 {
+          top: 96px;
+          gap: 50px;
+          right: 5;
+        }
+
+        &-item {
           display: flex;
         }
       }
 
-      &-link{
+      &-link {
         max-height: 18px;
+        &:focus-visible{
+          outline: none;
+        }
+        &:hover>.header__burger-social-icon,
+        &:focus-visible>.header__burger-social-icon
+        {
+            color: $color-ecru-white;
+          }
+
       }
 
-      &-icon{
+      &-icon {
         color: $color-seared-gray;
+      }
+    }
+
+    &-selecter {
+      display: none;
+
+      @include vp-767 {
+        display: flex;
+      }
+
+
+      &-link {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+      }
+
+      &-text {
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        color: $color-white;
       }
     }
   }
@@ -270,6 +428,10 @@
 
   &--burger-active .header__content>.header__left-col {
     gap: 90px;
+
+    @include vp-767 {
+      gap: 85px;
+    }
   }
 
   &--burger-active .header__content>.header__left-col>.header__menu {

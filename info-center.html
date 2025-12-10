@@ -10,27 +10,58 @@
 </head>
 
 <body>
-  <header class="header">
+   <header class="header"><!--header--burger-active -активация бургер меню -->
     <div class="container">
       <div class="header__burger">
         <div class="header__burger-wrapper">
           <div class="header__burger-blocks">
             <div class="header__burger-left">
-              <span class="header__burger-item">FINE DEVELOPMENT</span>
-              <span class="header__burger-item">ОТ ПРОЕКТА К РЕАЛЬНОСТИ</span>
-              <span class="header__burger-item">ПОРТФОЛИО</span>
-              <span class="header__burger-item">СЛУЖБА КОМФОРТА</span>
+              <a href="#" class="header__burger-link">
+                <span class="header__burger-item">FINE DEVELOPMENT</span>
+              </a>
+              <a href="#" class="header__burger-link">
+                <span class="header__burger-item">ОТ ПРОЕКТА К РЕАЛЬНОСТИ</span>
+              </a>
+              <a href="#" class="header__burger-link">
+                <span class="header__burger-item">ПОРТФОЛИО</span>
+              </a>
+              <a href="#" class="header__burger-link">
+                <span class="header__burger-item">СЛУЖБА КОМФОРТА</span>
+              </a>
             </div>
             <div class="header__burger-mid">
-              <span class="header__burger-item">СЛУЖБА КОМФОРТА</span>
-              <span class="header__burger-little-item">Фрунзенская набережная</span>
+              <a href="#" class="header__burger-link">
+                <span class="header__burger-item">СКОРО В ПРОДАЖЕ</span>
+              </a>
+              <a href="#" class="header__burger-link">
+                <span class="header__burger-little-item">Фрунзенская набережная</span>
+              </a>
             </div>
             <div class="header__burger-right">
-              <span class="header__burger-little-item">Работодатель № 1</span>
-              <span class="header__burger-little-item">Информационный центр</span>
-              <span class="header__burger-little-item">Кабинет брокера</span>
-              <span class="header__burger-little-item">Тендеры и сотрудничество</span>
-              <span class="header__burger-little-item">Контакты</span>
+              <a href="#" class="header__burger-link">
+                <span class="header__burger-little-item">Работодатель № 1</span>
+              </a>
+              <a href="#" class="header__burger-link">
+                <span class="header__burger-little-item">Информационный центр</span>
+              </a>
+              <a href="#" class="header__burger-link">
+                <span class="header__burger-little-item">Кабинет брокера</span>
+              </a>
+              <a href="#" class="header__burger-link">
+
+                <span class="header__burger-little-item">Тендеры и сотрудничество</span>
+              </a>
+              <a href="#" class="header__burger-link">
+                <span class="header__burger-little-item">Контакты</span>
+              </a>
+            </div>
+            <div class="header__burger-selecter">
+              <a href="#" class="header__burger-selecter-link">
+                <span class="header__burger-selecter-text">выбрать недвижимость</span>
+                <svg class="header__burger-selecter-icon" width="40" height="40">
+                  <use xlink:href="images/sprite.svg#icon-next"></use>
+                </svg>
+              </a>
             </div>
           </div>
           <div class="header__burger-social">
@@ -206,13 +237,13 @@
                   <button class="btn__giper">Все проекты</button>
                 </div>
               </div>
-              <div class="hero__slide-selecter-list">
+              <div class="hero__slide-selecter-list hero__slide-selecter-list--active"><!--hero__slide-selecter-list--active-->
                 <svg class="hero__slide-selecter-icon" width="24" height="24">
                   <use xlink:href="images/sprite.svg#icon-list"></use>
                 </svg>
                 <span class="hero__slide-selecter-text">Списком</span>
               </div>
-              <div class="hero__slide-selecter-grid hero__slide-selecter-grid--active">
+              <div class="hero__slide-selecter-grid hero__slide-selecter-grid--active"><!--hero__slide-selecter-grid--active-->
                 <svg width="24" height="24">
                   <use xlink:href="images/sprite.svg#icon-grid"></use>
                 </svg>
@@ -225,7 +256,8 @@
                   <div class="card__wrapper">
                     <div class="card__img-wrapper">
                       <picture>
-                        <img class="card__img" src="images/news/img-1-grid.jpg" srcset="images/news/img-1-grid@2x.jpg"
+                        <source media="(max-width:767px)" srcset="images/news/img-1-list-mobile.jpg 1x, images/news/img-1-list-mobile@2x.jpg">
+                        <img class="card__img" src="images/news/img-1-list.jpg" srcset="images/news/img-1-list@2x.jpg"
                           alt="Главный вход в дом">
                       </picture>
                     </div>
@@ -256,7 +288,8 @@
                   <div class="card__wrapper">
                     <div class="card__img-wrapper">
                       <picture>
-                        <img class="card__img" src="images/news/img-2-grid.jpg" srcset="images/news/img-2-grid@2x.jpg"
+                        <source media="(max-width:767px)" srcset="images/news/img-2-list-mobile.jpg 1x, images/news/img-2-list-mobile@2x.jpg">
+                        <img class="card__img" src="images/news/img-2-list.jpg" srcset="images/news/img-2-list@2x.jpg"
                           alt="Главный вход в дом">
                       </picture>
                     </div>
@@ -291,7 +324,8 @@
                   <div class="card__wrapper">
                     <div class="card__img-wrapper">
                       <picture>
-                        <img class="card__img" src="images/news/img-3-grid.jpg" srcset="images/news/img-3-grid@2x.jpg"
+                        <source media="(max-width:767px)" srcset="images/news/img-3-list-mobile.jpg 1x, images/news/img-3-list-mobile@2x.jpg">
+                        <img class="card__img" src="images/news/img-3-list.jpg" srcset="images/news/img-3-list@2x.jpg"
                           alt="Главный вход в дом">
                       </picture>
                     </div>
@@ -320,7 +354,8 @@
                   <div class="card__wrapper">
                     <div class="card__img-wrapper">
                       <picture>
-                        <img class="card__img" src="images/news/img-4-grid.jpg" srcset="images/news/img-4-grid@2x.jpg"
+                        <source media="(max-width:767px)" srcset="images/news/img-4-list-mobile.jpg 1x, images/news/img-4-list-mobile@2x.jpg">
+                        <img class="card__img" src="images/news/img-4-list.jpg" srcset="images/news/img-4-list@2x.jpg"
                           alt="Главный вход в дом">
                       </picture>
                     </div>
@@ -347,11 +382,12 @@
                 </div>
               </li>
               <li class="hero__slide-list-item">
-                <div class="card">
+                <div class="card card--dop-padding">
                   <div class="card__wrapper">
                     <div class="card__img-wrapper">
                       <picture>
-                        <img class="card__img" src="images/news/img-5-grid.jpg" srcset="images/news/img-5-grid@2x.jpg"
+                        <source media="(max-width:767px)" srcset="images/news/img-5-list-mobile.jpg 1x, images/news/img-5-list-mobile@2x.jpg">
+                        <img class="card__img" src="images/news/img-5-list.jpg" srcset="images/news/img-5-list@2x.jpg"
                           alt="Главный вход в дом">
                       </picture>
                     </div>
@@ -383,8 +419,9 @@
                 <div class="card card--listing">
                   <div class="card__wrapper">
                     <div class="card__img-wrapper">
-                      <picture>
-                        <img class="card__img" src="images/news/img-6-grid.jpg" srcset="images/news/img-6-grid@2x.jpg"
+                      <picture>\
+                        <source media="(max-width:767px)" srcset="images/news/img-6-list-mobile.jpg 1x, images/news/img-6-list-mobile@2x.jpg">
+                        <img class="card__img" src="images/news/img-6-list.jpg" srcset="images/news/img-6-list@2x.jpg"
                           alt="Главный вход в дом">
                       </picture>
                     </div>
@@ -450,7 +487,8 @@
                     </div>
                     <div class="card-grids__block">
                       <div class="card-grids__block-data">4 апреля 2024</div>
-                      <div class="card-grids__block-heading">Высокий спрос привёл к росту цен на элитную недвижимость Остоженки</div>
+                      <div class="card-grids__block-heading">Высокий спрос привёл к росту цен на элитную недвижимость
+                        Остоженки</div>
                     </div>
                   </div>
                 </div>
