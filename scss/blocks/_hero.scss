@@ -5,19 +5,9 @@
         padding: 15px 0;
     }
 
-    &__list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        list-style: none;
-        margin: 0;
-        padding: 0;
 
-        &-item {}
-
-        @include vp-767 {
-            display: none;
-        }
+    &__wrapper {
+        margin: 0 auto;
     }
 
 
@@ -25,20 +15,27 @@
     &__slide {
         display: flex;
         flex-direction: column;
+        width: 100%;
 
         &-selecter {
-            padding: 40px 0 20px;
+            padding: 0 0 20px;
+            width: 100%;
             display: flex;
-            gap: 30px;
+            flex-direction: column;
+            gap: 40px;
             border-bottom: 1px solid $color-chrome-white;
-            margin-bottom: 40px;
 
             @include vp-767 {
-                padding: 0 0 15px;
-                display: grid;
-                grid-template-columns: 260px 25px  20px;
-                gap:15px;
-                margin-bottom: 30px;
+                padding: 0 0 10px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            &-form {
+                width: 100%;
+                margin-bottom: 20px;
+
 
             }
 
@@ -50,23 +47,36 @@
                 }
             }
 
-            &-list,
-            &-grid {
+            &-change {
                 display: flex;
-                align-items: center;
-                gap: 10px;
-                font-size: 18px;
-                line-height: 26px;
-                color: $color-mischka;
-                cursor: pointer;
-                margin: 0;
 
-                @include vp-767{
-                    justify-content: end;
+                @include vp-767 {
+                    justify-content: flex-end;
                 }
 
-                &--active {
+                gap: 20px;
+
+                &-list,
+                &-grid {
+                    display: flex;
+                    align-items: center;
+                    border: none;
+                    background-color: transparent;
+                    gap: 10px;
+                    font-size: 18px;
+                    line-height: 26px;
                     color: $color-black;
+                    cursor: pointer;
+                    margin: 0;
+
+
+                    @include vp-767 {
+                        padding: 0;
+                    }
+
+                    &--active {
+                        color: $color-mischka;
+                    }
                 }
             }
 
@@ -77,8 +87,8 @@
                 }
             }
 
-            &-icon{
-                @include vp-767{
+            &-icon {
+                @include vp-767 {
                     width: 20px;
                     height: 20px;
                 }
@@ -86,13 +96,14 @@
         }
 
         &-list {
-            display: none;
             list-style: none;
             padding: 0;
-            margin: 0;
+            margin: 0 auto;
 
             &-item {
                 border-bottom: 1px solid $color-chrome-white;
+
+
 
                 &:last-child {
                     border: none;
@@ -105,42 +116,41 @@
         }
     }
 
+
+
     .hero__slide-selecter:has(.hero__slide-selecter-list.hero__slide-selecter-list--active) {
         margin-bottom: 0;
 
-        @include vp-767{
-           
-        }
+        @include vp-767 {}
     }
 
-    .hero__slide-selecter:has(.hero__slide-selecter-list.hero__slide-selecter-list--active)~.hero__slide-list {
+    .hero__slide-selecter:has(.hero__slide-selecter-change-list.hero__slide-selecter-change-list--active)~.hero__slide-list {
         display: flex;
         flex-direction: column;
     }
 
-    .hero__slide-selecter:has(.hero__slide-selecter-grid.hero__slide-selecter-grid--active)~.hero__slide-grid {
+    .hero__slide-selecter:has(.hero__slide-selecter-change-grid.hero__slide-selecter-change-grid--active)~.hero__slide-list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3,360px);
+        grid-template-rows: repeat(3, 360px);
         gap: 20px;
         list-style: none;
         margin: 0;
-        padding: 0;
-        
+        padding: 40px 0 0;
 
-        @media (max-width:1400px) {
+
+        @include vp-767 {
             display: flex;
             flex-direction: column;
+            gap: 15px;
+            padding: 30px 0 0;
         }
 
-        @include vp-767{
-            gap: 15px;
-        }
     }
 
-
-
-
+    .hero__slide-selecter:has(.hero__slide-selecter-change-grid.hero__slide-selecter-change-grid--active)~.hero__slide-list>.hero__slide-list-item {
+        border-bottom: none;
+    }
 
 
 
