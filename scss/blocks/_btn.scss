@@ -1,20 +1,5 @@
 .btn {
 
-    :disabled {
-        visibility: hidden;
-    }
-
-    &:focus-visible {
-        outline: none;
-    }
-
-    &:hover>&__giper,
-    &:focus-visible>&__giper {
-        background-color: $color-chrome-white;
-    }
-
-
-
     &__giper {
         background-color: $color-ecru-white;
         border: none;

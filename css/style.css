@@ -552,7 +552,8 @@ a {
   }
 }
 .header__link:hover, .header__link:focus-visible {
-  text-decoration: underline;
+  outline: none;
+  color: #d6d2c4;
 }
 .header__phone {
   display: flex;
@@ -561,6 +562,8 @@ a {
 }
 .header__phone:hover, .header__phone:focus-visible {
   opacity: 0.7;
+  outline: none;
+  color: #d6d2c4;
 }
 @media (max-width: 1023px) {
   .header__phone-text {
@@ -728,13 +731,13 @@ a {
 .header__burger-social-list-item {
   display: flex;
 }
-.header__burger-link {
+.header__burger-social-link {
   max-height: 18px;
 }
-.header__burger-link:focus-visible {
+.header__burger-social-link:focus-visible {
   outline: none;
 }
-.header__burger-link:hover .header__burger-social-icon, .header__burger-link:focus-visible .header__burger-social-icon {
+.header__burger-social-link:hover .header__burger-social-icon, .header__burger-social-link:focus-visible .header__burger-social-icon {
   color: #d6d2c4;
 }
 .header__burger-icon {
@@ -848,6 +851,11 @@ a {
   cursor: pointer;
   margin: 0;
 }
+.hero__slide-selecter-change-list:hover, .hero__slide-selecter-change-list:focus-visible, .hero__slide-selecter-change-grid:hover, .hero__slide-selecter-change-grid:focus-visible {
+  outline: none;
+  color: #000000;
+  text-decoration: underline;
+}
 @media (max-width: 767px) {
   .hero__slide-selecter-change-list, .hero__slide-selecter-change-grid {
     padding: 0;
@@ -922,6 +930,13 @@ a {
   height: 36px;
   display: flex;
 }
+.custom-checkbox:focus-visible {
+  outline: none;
+}
+.custom-checkbox:hover .custom-checkbox__label, .custom-checkbox:focus-visible .custom-checkbox__label {
+  outline: none;
+  background-color: #c8c4b5;
+}
 @media (max-width: 767px) {
   .custom-checkbox:not(:first-child) {
     display: none;
@@ -958,15 +973,6 @@ a {
   color: #ffffff;
 }
 
-.btn :disabled {
-  visibility: hidden;
-}
-.btn:focus-visible {
-  outline: none;
-}
-.btn:hover > .btn__giper, .btn:focus-visible > .btn__giper {
-  background-color: #c8c4b5;
-}
 .btn__giper {
   background-color: #d6d2c4;
   border: none;
@@ -992,6 +998,10 @@ a {
   display: grid;
   grid-template-columns: 340px 100px 400px 72px 400px;
 }
+.card:hover, .card:focus-visible {
+  outline: none;
+  background-color: #f2f3ee;
+}
 @media (max-width: 767px) {
   .card {
     display: flex;
@@ -1006,6 +1016,14 @@ a {
   flex-direction: column;
   padding: 40px;
   margin: 0 auto;
+  outline: none;
+}
+.card--grid:hover, .card--grid:focus-visible {
+  background-color: transparent;
+}
+.card--grid:hover::before, .card--grid:focus-visible::before {
+  outline: none;
+  background: rgba(0, 0, 0, 0.5);
 }
 @media (max-width: 1240px) {
   .card--grid {

@@ -2,11 +2,20 @@
     height: 36px;
     display: flex;
 
-    @include vp-767{
+    &:focus-visible {
+        outline: none;
     }
 
-    &:not(:first-child){
-        @include vp-767{
+    &:hover &__label,
+    &:focus-visible &__label {
+        outline: none;
+        background-color: $color-chrome-white;
+    }
+
+    @include vp-767 {}
+
+    &:not(:first-child) {
+        @include vp-767 {
             display: none;
         }
     }
@@ -19,15 +28,14 @@
         padding: 8px 16px;
         cursor: pointer;
 
-        @include vp-767{
-        }
+        @include vp-767 {}
 
         &-text {
             font-size: 14px;
             line-height: 20px;
-            
 
-            @include vp-767{
+
+            @include vp-767 {
                 font-size: 12px;
                 line-height: 16px;
             }
@@ -35,7 +43,7 @@
             &-mobile {
                 display: none;
 
-                @include vp-767{
+                @include vp-767 {
                     display: inline;
                 }
             }

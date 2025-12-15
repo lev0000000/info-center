@@ -69,6 +69,13 @@
                     cursor: pointer;
                     margin: 0;
 
+                    &:hover,
+                    &:focus-visible{
+                        outline: none;
+                        color: $color-black;
+                        text-decoration: underline;
+                    }
+
 
                     @include vp-767 {
                         padding: 0;

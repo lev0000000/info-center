@@ -3,6 +3,14 @@
     display: grid;
     grid-template-columns: 340px 100px 400px 72px 400px;
 
+    &:hover,
+    &:focus-visible {
+        outline: none;
+        background-color: $color-twilight-blue;
+    }
+
+
+
     @include vp-767 {
         display: flex;
         flex-direction: column;
@@ -19,6 +27,22 @@
         flex-direction: column;
         padding: 40px;
         margin: 0 auto;
+        outline: none;
+
+        &:hover,
+        &:focus-visible {
+            background-color: transparent;
+        }
+
+
+        &:hover::before,
+        &:focus-visible::before {
+            outline: none;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+
+
 
         @media(max-width:1240px) {
             padding: 25px;
@@ -48,6 +72,7 @@
                 height: 200px;
             }
         }
+
 
         .card__img-wrapper {
             position: absolute;
@@ -263,14 +288,14 @@
         grid-column: 5;
         margin-bottom: 60px;
 
-        @include vp-767{  
+        @include vp-767 {
             margin-bottom: 0;
         }
 
-        &--mini{
+        &--mini {
             margin-bottom: 30px;
 
-            @include vp-767{
+            @include vp-767 {
                 margin-bottom: 0;
             }
         }
