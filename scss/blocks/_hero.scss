@@ -131,8 +131,8 @@
 
     .hero__slide-selecter:has(.hero__slide-selecter-change-grid.hero__slide-selecter-change-grid--active)~.hero__slide-list {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 360px);
+        grid-template-columns: repeat(2, 674px);
+        grid-template-rows: repeat(3, 1fr);
         gap: 20px;
         list-style: none;
         margin: 0;

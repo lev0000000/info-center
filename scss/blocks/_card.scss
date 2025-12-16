@@ -40,7 +40,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 360px;
+            height: 100%;
             background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
 
             @include vp-767 {
@@ -50,16 +50,13 @@
         }
 
         .card__img-wrapper {
-            position: absolute;
             width: 100%;
-            height: 360px;
-            top: 0;
-            left: 0;
+            height: 100%;
             z-index: -2;
 
             @include vp-767 {
                 width: 335px;
-                height: 200px;
+                height: 100%;
             }
 
         }
@@ -69,25 +66,26 @@
         }
 
         .card__img-grid {
-            display: flex;
             position: absolute;
-            width: 100%;
-            height: 360px;
             top: 0;
             left: 0;
-            z-index: -1;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
 
             @include vp-767 {
                 width: 335px;
-                height: 200px;
+                height: 100%;
             }
         }
 
         .card__block {
             flex-direction: column-reverse;
-            gap: 0;
-            max-width: 594px;
-            gap: 158px;
+            min-height: 280px;
+            width: 100%;
+            height: 100%;
+            justify-content: space-between;
 
 
 
@@ -101,16 +99,16 @@
                 display: flex;
                 flex-direction: column-reverse;
                 gap: 10px;
+                width: 100%;
             }
 
             &-heading {
                 font-size: 24px;
                 line-height: 28px;
                 color: $color-white;
-                width: 594px;
+                width: 100%;
 
                 @media(max-width:1150px) {
-                    width: 400px;
                 }
 
                 @include vp-767 {
@@ -131,7 +129,6 @@
 
                 @include vp-767 {
                     position: unset;
-                    margin-bottom: 42px;
                     font-size: 12px;
                     line-height: 16px;
                 }
@@ -146,9 +143,7 @@
             .card__block {
 
                 &-btn {
-                    @include vp-767 {
-                        margin-bottom: 62px;
-                    }
+                    @include vp-767 {}
                 }
             }
 
@@ -157,7 +152,6 @@
         &-xl-flat {
 
             .card__block {
-                gap: 130px;
 
                 @include vp-767 {
                     gap: 0;
@@ -203,16 +197,7 @@
             margin: 0;
             width: 410px;
 
-            @media (max-width:1400px) {
-                width: 250px;
-            }
-
-            @include vp-1023 {
-                width: 100%;
-                grid-column: 1/3;
-                grid-row: 2;
-            }
-
+            
             @include vp-767 {
                 width: 340px;
                 font-size: 20px;
@@ -263,14 +248,14 @@
         grid-column: 5;
         margin-bottom: 60px;
 
-        @include vp-767{  
+        @include vp-767 {
             margin-bottom: 0;
         }
 
-        &--mini{
+        &--mini {
             margin-bottom: 30px;
 
-            @include vp-767{
+            @include vp-767 {
                 margin-bottom: 0;
             }
         }
