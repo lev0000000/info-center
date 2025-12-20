@@ -210,6 +210,10 @@
     height: 100vh;
     padding: 120px 0 0 220px;
 
+    @media (max-width:1600px) {
+      padding: 80px 0 0 74px;
+    }
+
     @include vp-1023 {
       top: 61px;
       padding: 80px 0 0 74px;
@@ -226,6 +230,11 @@
       justify-content: center;
       gap: 175px;
 
+      @media (max-width:1600px) {
+        justify-content: flex-start;
+        gap: 30px;
+      }
+
       @include vp-1023 {
         justify-content: flex-start;
         gap: 30px;
@@ -233,12 +242,17 @@
 
       @include vp-767 {
         align-items: center;
+        justify-content: center;
       }
     }
 
     &-blocks {
       display: flex;
       gap: 90px;
+
+      @media (max-width:1700px){
+        gap: 10px;
+      }
 
       @include vp-1023 {
         display: grid;
@@ -350,7 +364,7 @@
       gap: 60px;
       color: $color-seared-gray;
 
-      @include vp-767{
+      @include vp-767 {
         padding-bottom: 60px;
         gap: 50px;
       }
@@ -397,24 +411,24 @@
 
   }
 
-  &--burger-active &__burger {
+  &--open &__burger {
     display: block;
   }
 
-  &--burger-active {
+  &--open {
     background-color: $color-blue-charcoa;
     border-bottom: 1px solid $color-deepest-sea;
   }
 
-  &--burger-active .header__content {
+  &--open .header__content {
     color: $color-white;
   }
 
-  &--burger-active .header__logo-link {
+  &--open .header__logo-link {
     color: $color-white;
   }
 
-  &--burger-active .header__content>.header__left-col {
+  &--open .header__left-col {
     gap: 90px;
 
     @include vp-767 {
@@ -422,11 +436,11 @@
     }
   }
 
-  &--burger-active .header__content>.header__left-col>.header__menu {
+  &--open .header__menu {
     display: none;
   }
 
-  &--burger-active .header__content>.header__left-col>.header__menu-close {
+  &--open .header__menu-close {
     display: block;
   }
 
